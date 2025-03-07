@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane nodeOrientation="LEFT_TO_RIGHT" prefHeight="501.0" prefWidth="765.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mid_problem.CourseRegistrationcontroller">
+   <children>
+      <Label layoutX="28.0" layoutY="29.0" text="Student ID:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="idTextField" layoutX="105.0" layoutY="27.0" promptText="Enter ID" />
+      <CheckBox fx:id="scholarshipCheckBox" layoutX="29.0" layoutY="74.0" mnemonicParsing="false" text="Has Scholarship" />
+      <Label layoutX="25.0" layoutY="113.0" text="Scholarship:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="scholarshipTextField" layoutX="107.0" layoutY="111.0" prefHeight="26.0" prefWidth="46.0" promptText="\%" />
+      <Label layoutX="280.0" layoutY="30.0" text="Select Course:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="courseComboBox" layoutX="375.0" layoutY="28.0" prefHeight="26.0" prefWidth="110.0" promptText="Select Course" />
+      <Label layoutX="280.0" layoutY="82.0" text="No. of Credit:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="creditTextField" layoutX="367.0" layoutY="79.0" prefHeight="26.0" prefWidth="62.0" promptText="Credit" />
+      <ComboBox fx:id="sectionComboBox" layoutX="367.0" layoutY="125.0" prefHeight="26.0" prefWidth="110.0" promptText="Section" />
+      <Label layoutX="277.0" layoutY="127.0" text="Select Section:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="561.0" layoutY="41.0" mnemonicParsing="false" onAction="#addCourseButton" prefHeight="46.0" prefWidth="82.0" text="Add Course">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="535.0" layoutY="104.0" mnemonicParsing="false" onAction="#registerButton" prefHeight="38.0" prefWidth="143.0" text="Registered Course">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <TableView fx:id="studentTable" layoutX="158.0" layoutY="161.0" prefHeight="200.0" prefWidth="426.0">
+        <columns>
+          <TableColumn fx:id="idCols" prefWidth="120.0" text="Student ID" />
+          <TableColumn fx:id="courseCols" prefWidth="110.39996337890625" text="Couse Title" />
+            <TableColumn fx:id="sectionCols" prefWidth="90.40008544921875" text="Section" />
+            <TableColumn fx:id="creditCols" prefWidth="106.39999389648438" text="Credit Hr" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
