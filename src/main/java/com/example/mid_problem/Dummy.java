@@ -2,34 +2,34 @@ package com.example.mid_problem;
 
 public class Dummy {
     private int id;
-    private String courseName;
+    private String courseID;
     private int section;
-    private int credit;
+    private int courseCredit;
 
-    public Dummy(int id, String courseID, int section, int courseCredit) {
+    public Dummy() {
     }
 
-    public Dummy(String courseName, int credit, int id, int section) {
-        this.courseName = courseName;
-        this.credit = credit;
+    public Dummy(int courseCredit, String courseID, int id, int section) {
+        this.courseCredit = courseCredit;
+        this.courseID = courseID;
         this.id = id;
         this.section = section;
     }
 
-    public String getCourseName() {
-        return courseName;
+    public int getCourseCredit() {
+        return courseCredit;
     }
 
-    public void setCourseName(String courseName) {
-        this.courseName = courseName;
+    public void setCourseCredit(int courseCredit) {
+        this.courseCredit = courseCredit;
     }
 
-    public int getCredit() {
-        return credit;
+    public String getCourseID() {
+        return courseID;
     }
 
-    public void setCredit(int credit) {
-        this.credit = credit;
+    public void setCourseID(String courseID) {
+        this.courseID = courseID;
     }
 
     public int getId() {
@@ -51,10 +51,10 @@ public class Dummy {
     @Override
     public String toString() {
         return "Dummy{" +
-                "courseName='" + courseName + '\'' +
+                "courseCredit=" + courseCredit +
                 ", id=" + id +
+                ", courseID='" + courseID + '\'' +
                 ", section=" + section +
-                ", credit=" + credit +
                 '}';
     }
 }
