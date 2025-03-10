@@ -77,7 +77,7 @@ public class CourseRegistrationcontroller {
         for (RegisteredCourse i : registration) {
             Dummy d = new Dummy(id,i.getCourseID(), i.getSection(), i.getCourseCredit());
             dummy.add(d);
-            studentTable.getItems().addAll(d);
+            studentTable.getItems().addAll(dummy);
         }
     }
 
