@@ -53,10 +53,10 @@ public class CourseRegistrationcontroller {
         courseComboBox.getItems().addAll("CSE101","CSE101L" ,"CSE102","CSE102L" ,"CSE103", "CSE103L","CSE104", "CSE104L");
         sectionComboBox.getItems().addAll(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 
-        idCols.setCellValueFactory(new PropertyValueFactory<>("id"));
-        courseCols.setCellValueFactory(new PropertyValueFactory<>("courseID"));
-        sectionCols.setCellValueFactory(new PropertyValueFactory<>("section"));
-        creditCols.setCellValueFactory(new PropertyValueFactory<>("courseCredit"));
+        idCols.setCellValueFactory(new PropertyValueFactory<Dummy,Integer>("id"));
+        courseCols.setCellValueFactory(new PropertyValueFactory<Dummy,String>("courseID"));
+        sectionCols.setCellValueFactory(new PropertyValueFactory<Dummy,Integer>("section"));
+        creditCols.setCellValueFactory(new PropertyValueFactory<Dummy,Integer>("courseCredit"));
 
     }
     @FXML
@@ -75,7 +75,7 @@ public class CourseRegistrationcontroller {
         for (RegisteredCourse i : registration) {
             Dummy d = new Dummy(id,i.getCourseID(), i.getSection(), i.getCourseCredit());
             dummy.add(d);
-            studentTable.getItems().addAll(d);
+            studentTable.getItems().addAll(dummy);
         }
     }
 

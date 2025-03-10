@@ -9,10 +9,10 @@ public class Dummy {
     public Dummy() {
     }
 
-    public Dummy(int courseCredit, String courseID, int id, int section) {
+    public Dummy(int id, String courseID, int section, int courseCredit) {
+        this.id = id;
         this.courseCredit = courseCredit;
         this.courseID = courseID;
-        this.id = id;
         this.section = section;
     }
 
